@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         // Observing live data for speed updates
         viewModel.wifiSpeed.observe(this) { speed ->
-            binding.tvWifiSpeed.text = getString(R.string.speed_format, speed)
+            binding.tvWifiSpeed.text = "Wifi Speed\t"+getString(R.string.speed_format, speed)
         }
         viewModel.mobileSpeed.observe(this) { speed ->
-            binding.tvMobileSpeed.text = getString(R.string.speed_format, speed)
+            binding.tvMobileSpeed.text = "Mobile network speed \t "+getString(R.string.speed_format, speed)
         }
 
         // Start monitoring network speed
